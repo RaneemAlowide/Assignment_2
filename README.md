@@ -2,7 +2,7 @@
 
 <p>This repositry was created to do a group work , edit a code with errors and problems</p>
 <p>
-    <h4>Student names & id & what each student did:<h4>
+    <p><h4>Student names & id & what each student did:<h4></p>
     <ul>
         <li>Raneem Alowide 2110171 , The method DataProcessor needed a type so i add type void</li>
         <li></li>
