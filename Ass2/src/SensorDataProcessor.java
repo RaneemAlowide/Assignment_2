@@ -11,9 +11,8 @@ public class SensorDataProcessor {
     }
     // calculates average of sensor data
     private double average(double[] array) {
-        int i = 0;
         double val = 0;
-        for (i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             val += array[i];
         }
         return val / array.length;
@@ -28,8 +27,8 @@ public class SensorDataProcessor {
         try {
             out = new BufferedWriter(new FileWriter("RacingStatsData.txt"));
             for (i = 0; i < data.length; i++) {
-                for (j = 0; j < data[0].length; j++) {
-                    for (k = 0; k < data[0][0].length; k++) {
+                for ( j = 0; j < data[0].length; j++) {
+                    for ( k = 0; k < data[0][0].length; k++) {
                         data2[i][j][k] = data[i][j][k] / d -
                                 Math.pow(limit[i][j], 2.0);
                         if (average(data2[i][j]) > 10 && average(data2[i][j])
