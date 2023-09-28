@@ -53,8 +53,8 @@ public class SensorDataProcessor {
                 }
             }
             out.close();
-        } catch (Exception e) {
-            System.out.println("Error= " + e);
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle the exception properly
         }
     }
 }
