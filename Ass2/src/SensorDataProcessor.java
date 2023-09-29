@@ -15,7 +15,9 @@ public class SensorDataProcessor {
         for (int i = 0; i < array.length; i++) {
             val += array[i];
         }
-        return val / array.length;
+        //added a result variable to calvulate better 
+        double result =val / array.length;
+        return result;
     }
     // calculate data
     public void calculate(double d) {
@@ -47,11 +49,17 @@ public class SensorDataProcessor {
                     }
                 }
             }
+            //a
             for (i = 0; i < data2.length; i++) {
-                for (j = 0; j < data2[0].length; j++) {
-                    out.write(data2[i][j] + "\t");
-                }
-            }
+    for (j = 0; j < data2[0].length; j++) {
+        for (k = 0; k < data2[0][0].length; k++) {
+            out.write(data2[i][j][k] + "\t");
+        }
+// newline after each row
+        out.newLine(); 
+    }
+}
+
             out.close();
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception properly
